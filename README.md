@@ -1,6 +1,6 @@
 == README
 
-This README would documents the steps are necessary to get the
+This README documents the steps are necessary to get the
 application up and running etc.
 
 
