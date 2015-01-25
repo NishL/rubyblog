@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
 	def index
-		@content_first = "This is some sample text for the blog.";
-		@content_second = "This is some more sample text.";
+		@post = Post.all
 	end
 
 	def new
