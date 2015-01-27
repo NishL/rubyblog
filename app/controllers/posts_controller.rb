@@ -4,11 +4,18 @@ class PostsController < ApplicationController
 	end
 
 	def new
+		@post = Post.new
+		@category = Category.all
 
 	end
 
 	def create
-
+		@post = Post.new{params[:post]}
+		if @post.save
+			redirect_to posts_path, :notice => "Your post has been saved"
+		else
+			render "new"
+		end
 	end
 
 	def edit
@@ -20,7 +27,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		@post = Post.find(params[:id])
+		@post = Post.find{params[:id]}
 
 	end
 
