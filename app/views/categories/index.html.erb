@@ -1,22 +1,8 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Listing Categories</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.name %></td>       
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<ul>
+  <li><% @categories.each do |category| %></li>
+  <li><%= link_to category.name, category %></li>
+<% end %>
+</ul>
 
 

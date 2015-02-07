@@ -11,8 +11,8 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     @categories = Category.find(params[:id])
-    @title = Category.name
-    @post = @category.post
+    @title = @category.name
+    @posts = @category.post
   end
 
   # GET /categories/new
